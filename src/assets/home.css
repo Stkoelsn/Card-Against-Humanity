@@ -1,0 +1,104 @@
+.tutorialBox {
+  margin: auto;
+  width: 80%;
+  margin-top: max(3.5em, 5%);
+  text-align: center;
+
+  border: 3px solid rgb(0, 0, 0);
+  background-color: var(--main-color);
+  opacity: 0.7;
+}
+
+.infoBox {
+  margin: auto;
+  width: 100%;
+  margin-top: 0%;
+  text-align: center;
+  align-items: center;
+  height: 73vh;
+  overflow-y: scroll;
+}
+
+.topBraket {
+  padding-bottom: 1vh;
+}
+
+.topButton {
+  width: 25%;
+  font-size: 2vw;
+}
+.textExaplin {
+  font-size: min(3vh, 2vw);
+  width: 100%;
+  color: var(--fore-color);
+}
+.infoBracketsss {
+  height: 60vh;
+  width: 100%;
+}
+.pictureCreateGame {
+  background-image: url(../assets/createGame.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: auto;
+}
+.pictureIngame {
+  background-image: url(../assets/inGame.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: auto;
+}
+.pictureJoinGame {
+  background-image: url(../assets/joinGame.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: auto;
+}
+.pictureMenu {
+  background-image: url(../assets/menu.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: auto;
+}
+.pictureMenu2 {
+  background-image: url(../assets/menu2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 60vh;
+  width: auto;
+}
+
+.leftBracket {
+  width: 50%;
+  float: left;
+}
+.rightBracket {
+  width: 50%;
+  float: right;
+}
+@media screen and (orientation: portrait) {
+  .topButton {
+    width: 25%;
+    font-size: 5vw;
+  }
+  .textExaplin {
+    font-size: 3.5vw;
+    width: 100%;
+  }
+}
+@media screen and (max-height: 500px) {
+  .infoBox {
+    margin-top: 0%;
+
+    height: 66vh;
+  }
+  .topButton {
+    position: relative;
+    width: 25%;
+    font-size: 2vw;
+  }
+}

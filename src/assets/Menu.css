@@ -1,0 +1,268 @@
+#App {
+  font-family: sans-serif;
+
+  /* Give app full page to work with */
+  height: 100vh;
+}
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 0.5vh;
+  color: #d1d1d1;
+  transition: color 0.2s;
+  font-size: 1.7em;
+}
+
+.bm-user {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white;
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: fixed;
+  width: 3em;
+  height: 2em;
+  left: 2em;
+  top: 2em;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--fore-color);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+}
+
+.bm-flag {
+    bottom: 2%;
+    background-color: transparent;
+    float:left;
+    margin-left: 0.2%;
+    margin-right: 3%;
+    width: fit-content;
+    border: transparent;
+    margin-top: 1.0em;
+}
+.bm-flag:active{
+  transform: translateY(4px);
+  opacity: 50%;
+}
+img {
+  width: 8.0em;
+  height: 4.5em;
+  object-fit: scale-down;
+
+}
+
+.bm-flag:hover {
+  cursor: pointer;
+  }
+.bm-bottompane {
+  display: flexbox;
+  position: absolute; 
+  bottom: 10%;
+  max-height: 10%;
+  width:100%;
+  margin-left: -0.5em;
+
+}
+
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*
+light and dark theme button
+*/
+.bm-light{
+  display: block;
+  width: 40%;
+  height: 2%;
+  font-size: 1.0em;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border: 2px solid rgb(51, 51, 51);
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  float: left;
+  margin-right: 5%;
+  border-radius: 4px;
+}
+
+.bm-light span{
+  position: relative;
+  z-index: 2;
+}
+.bm-light:active {
+  transform: translateY(2px);
+  opacity: 50%;
+
+}
+
+.bm-light:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(-45deg, #a334ec, #9882f7, #23a6d5, #23d5ab);
+  transition: all .35s;
+}
+
+.bm-light:hover{
+  color: #fff;
+  cursor: pointer;
+}
+
+.bm-light:hover:after{
+  width: 100%;
+}
+
+.bm-dark{
+  display: block;
+  width: 40%;
+  height: 2%;
+  font-size: 1.0em;
+  font-family: sans-serif;
+  color: #fff;
+  border: 2px solid rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  background-color: #000;
+  border-radius: 4px;
+}
+
+.bm-dark span{
+  position: relative;
+  z-index: 2;
+}
+
+.bm-dark:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(-45deg, #1D5346, #163B49, #2A0054, #679436);
+  transition: all .35s;
+}
+
+
+
+.bm-dark:hover{
+  color: #fff;
+  cursor: pointer;
+}
+.bm-dark:active {
+  transform: translateY(2px);
+  opacity: 50%;
+
+}
+.bm-dark:hover:after{
+  width: 100%;
+}
+
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (orientation: landscape){
+  .bm-bottompane{
+    bottom: 30%;
+    max-height: 5%;
+ 
+  }
+  .bm-item {
+    font-size: 1.6em;
+
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .bm-menu {
+    background: #373a47;
+    padding: 0.5em 1.5em 0;
+    font-size: 1.15em;
+    
+  }
+  .bm-burger-button {
+    position: fixed;
+    width: 2.7em;
+    height: 2em;
+    left: 1em;
+    top: 2em;
+    
+  }
+.bm-bottompane{
+  bottom: 23%;
+}
+.bm-item{
+  margin-bottom: 0.2em;
+}
+}
