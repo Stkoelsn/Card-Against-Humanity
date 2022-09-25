@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/CaH/precache-manifest.fbdaff0408fd9fd394cef482f6ad730d.js"
+  "/Card-Against-Humanity/precache-manifest.ddce0cda2fe02de870f091ffe4b4c810.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/CaH/index.html", {
+workbox.routing.registerNavigationRoute("/Card-Against-Humanity/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
